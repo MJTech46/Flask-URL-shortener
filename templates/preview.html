@@ -27,7 +27,7 @@
             <!-- current site  -->
             <div class="d-flex flex-column text-white">
                 <h2 class="text-start">Current link:</h2>
-                <h4><a href="/{{ shortened_link }}"><span id="protocolHostPort">https://jsWillReplaceThis/</span></a></h4>
+                <h4><a href="/{{ shortened_link }}"><span id="protocolHostPort">https://jsWillReplaceThis/</span>{{ shortened_link }}</a></h4>
             </div>
             <!-- redirecting site  -->
             <div class="d-flex flex-column text-white">
@@ -39,7 +39,7 @@
 
     <div class="mt-5 mb-3 d-flex flex-column justify-content-center align-items-center">
         <a class="btn btn-primary rounded-3 ps-3 pe-3 fw-bold" href="/">
-            <img src="/static/images/url.png" alt="reroll" style="width: 32px; height: 32px;"> Short new link
+            <img src="/static/images/url.png" alt="shorten-new" style="width: 32px; height: 32px;"> Short new link
         </a>
     </div>
 {% endblock body %}

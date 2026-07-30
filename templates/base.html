@@ -18,8 +18,12 @@
     <!-- script to be executed at the beginning of all pages -->
     <script>
         // for replacing the place holder with current hosted host with port (if any)
-        var protocolHostPortText = window.location.href;
-        document.getElementById("protocolHostPort").innerHTML = protocolHostPortText;
+        try{ // the "try" is for removing the error that shows on the console of index page.
+            var protocolHostPortText = window.location.origin + "/";
+            document.getElementById("protocolHostPort").innerHTML = protocolHostPortText;
+        } catch (error) {
+            //console.error("Error replacing placeholder:", error);
+        }
 
         // for forcing the page to reload when the user navigates back to it
         window.addEventListener("pageshow", function(event) {
